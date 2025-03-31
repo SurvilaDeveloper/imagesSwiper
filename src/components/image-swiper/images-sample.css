@@ -1,0 +1,98 @@
+.bot-photo-sample-grid {
+    display: grid;
+    cursor: pointer;
+}
+
+.bot-photo-sample-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Contenedor del carrusel */
+.fullscreen-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+/* Imagen principal del carrusel */
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+
+    height: 90vh;
+}
+
+.carousel-image {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.nav-button.prev {
+    left: 6px;
+}
+
+.nav-button.next {
+    right: 6px;
+}
+
+/* Miniaturas */
+.carousel-thumbnails {
+    display: flex;
+    /*justify-content: center;*/
+    gap: 8px;
+    margin-top: 0px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.thumbnail.active {
+    border: 2px solid white;
+}
+
+.thumbnail:hover {
+    border: 2px solid lightgray;
+}
+
+/* Botón de cerrar */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
